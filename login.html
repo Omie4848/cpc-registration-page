@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | CodingLab</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      background: #010227;
+    }
+
+    .container {
+      max-width: 700px;
+      width: 100%;
+      background-color: #fff;
+      padding: 25px 30px;
+      border-radius: 5px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .logo {
+      display: block;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .logo img {
+      max-width: 150px;
+      height: auto;
+    }
+
+    .container .title {
+      font-size: 25px;
+      font-weight: 1000;
+      position: relative;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .container .title::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      height: 2px;
+      width: 70px;
+      border-radius: 5px;
+      background: #010227;
+    }
+
+    .content form .user-details {
+      display: flex;
+      flex-direction: column;
+      margin: 20px 0 12px 0;
+    }
+
+    form .user-details .input-box {
+      margin-bottom: 15px;
+    }
+
+    form .input-box span.details {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+
+    .user-details .input-box input {
+      height: 45px;
+      width: 100%;
+      outline: none;
+      font-size: 16px;
+      border-radius: 5px;
+      padding-left: 15px;
+      border: 1px solid #ccc;
+      border-bottom-width: 2px;
+      transition: all 0.3s ease;
+    }
+
+    .user-details .input-box input:focus,
+    .user-details .input-box input:valid {
+      border-color: #9b59b6;
+    }
+
+    form input[type="radio"] {
+      display: none;
+    }
+
+    .button {
+      height: 45px;
+      margin: 35px 0;
+    }
+
+    .button input {
+      height: 100%;
+      width: 100%;
+      border-radius: 5px;
+      border: none;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      background: #010227;
+    }
+
+    .button input:hover {
+      background: linear-gradient(-135deg, #399129, #399129);
+    }
+
+    @media (max-width: 584px) {
+      .container {
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 459px) {
+      .container .content .category {
+        flex-direction: column;
+      }
+    }
+    
+    .not-registered {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .not-registered a {
+      color: #6c30ac;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .not-registered a:hover {
+      color: #b38acc;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="https://cdn.pixabay.com/photo/2023/08/17/14/56/14-56-38-681_150.png" alt="Logo">
+    </div>
+    <div class="title">Login</div>
+    <div class="content">
+      <form action="#">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="text" placeholder="Enter your Email" required>
+          </div>
+        </div>
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="password" placeholder="Enter your password" required>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Login">
+        </div>
+        <div class="not-registered">
+            <p>Not a registered user? <a href="register.html">Register</a></p>
+          </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
